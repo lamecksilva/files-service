@@ -10,8 +10,6 @@ export const imagesController = {
       const imageBuffer = req.file?.buffer
       const SERVER_URL = process.env.SERVER_URL || 'http://localhost:9000'
 
-      console.log(req.file.filename)
-
       const thumbBuffer = await sharp(imageBuffer).resize(80, 80).png().toBuffer()
       const mediumImage = await sharp(imageBuffer).resize(250, 250).png().toBuffer()
       const originalImage = await sharp(req.file.buffer).png().toBuffer()

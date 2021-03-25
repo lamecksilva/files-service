@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A simple files service",
   "main": "build/index.js",
-  "repository": "https://github.com/lamecksilva/files-service.git",
   "author": "Lameck Sandro <lameck2@hotmail.com>",
   "license": "MIT",
   "private": false,
@@ -40,6 +39,7 @@
     "sharp": "^0.26.2"
   },
   "scripts": {
+    "start": "node ./build",
     "build": "rimraf ./build && tsc",
     "dev": "ts-node-dev --respawn --transpile-only --inspect -- ./src/index.ts",
     "lint": "eslint --fix --ext .js,.ts,.json ."
